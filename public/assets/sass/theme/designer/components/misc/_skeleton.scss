@@ -1,0 +1,8 @@
+.p-skeleton {
+    background-color: $skeletonBg;
+    border-radius: $borderRadius;
+
+    &:after {
+        background: linear-gradient(90deg, transparent, $skeletonAnimationBg, transparent);
+    }
+}
