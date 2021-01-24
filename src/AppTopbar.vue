@@ -9,70 +9,6 @@
         </a>
 
 		<ul class="layout-topbar-menu">
-			<li :class="[{'active-topmenuitem': activeTopbarItem === 'settings'}]" class="layout-topbar-item"
-				@click="$emit('topbar-item-click',{originalEvent:$event,item:'settings'})">
-				<a class="layout-topbar-icon first">
-					<i class="topbar-icon pi pi-cog"></i>
-				</a>
-				<transition name="layout-submenu-container">
-					<ul class="fadeInDown" v-show="activeTopbarItem === 'settings'">
-						<li>
-							<a href="#" class="layout-topbar-icon">
-								<i class="topbar-icon pi pi-bookmark"></i>
-							</a>
-							<div class="layout-quickmenu-tooltip">
-								<div class="layout-quickmenu-tooltip-arrow"></div>
-								<div class="layout-quickmenu-tooltip-text">Bookmarks</div>
-							</div>
-						</li>
-						<li>
-							<a href="#" class="layout-topbar-icon">
-								<i class="topbar-icon pi pi-chart-bar"></i>
-							</a>
-							<div class="layout-quickmenu-tooltip">
-								<div class="layout-quickmenu-tooltip-arrow"></div>
-								<div class="layout-quickmenu-tooltip-text">Statistics</div>
-							</div>
-						</li>
-						<li>
-							<a href="#" class="layout-topbar-icon">
-								<i class="topbar-icon pi pi-sign-out"></i>
-							</a>
-							<div class="layout-quickmenu-tooltip">
-								<div class="layout-quickmenu-tooltip-arrow"></div>
-								<div class="layout-quickmenu-tooltip-text">Sign Out</div>
-							</div>
-						</li>
-					</ul>
-				</transition>
-			</li>
-			<li :class="[{'active-topmenuitem': activeTopbarItem === 'calendar'}]" class="layout-topbar-item"
-				@click="$emit('topbar-item-click',{originalEvent:$event,item:'calendar'})">
-				<a class="layout-topbar-icon first">
-					<i class="topbar-icon pi pi-calendar"></i>
-				</a>
-				<transition name="layout-submenu-container">
-					<ul class="fadeInDown" v-show="activeTopbarItem === 'calendar'">
-						<li>
-							<a href="#" class="layout-topbar-text">
-								SUN
-							</a>
-						</li>
-						<li>
-							<a href="#" class="layout-topbar-text">
-								MON
-							</a>
-						</li>
-						<li>
-							<a href="#" class="layout-topbar-text">
-								TUE
-							</a>
-						</li>
-					</ul>
-				</transition>
-			</li>
-
-
 			<li :class="['topbar-search',{'active-topmenuitem': activeTopbarItem === 'search'}]" class="layout-topbar-item"
 				@click="$emit('topbar-item-click',{originalEvent:$event,item:'search'})">
 				<a href="#" class="layout-topbar-icon first">
@@ -85,8 +21,8 @@
 				@click="$emit('topbar-item-click',{originalEvent:$event,item:'profile'})">
 				<a href="#">
 					<div class="user-profile-info profile-link">
-						<span class="user-profile-name">Ava Gregoraci</span>
-						<span class="user-profile-role">Design Ops</span>
+						<span class="user-profile-name">Jo&atilde;o Coelho</span>
+						<span class="user-profile-role">Founder</span>
 					</div>
 					<img class="logo" src="assets/layout/images/avatar/avatar-ava.jpg" alt="prestige-layout" />
 				</a>
@@ -96,8 +32,8 @@
 							<div class="user-profile-info">
 								<img class="logo" src="assets/layout/images/avatar/avatar-ava.jpg" alt="prestige-layout" />
 								<div class="profile-info">
-									<span class="user-profile-name">Ava Gregoraci</span>
-									<span class="user-profile-role">Design Ops</span>
+									<span class="user-profile-name">Jo&atilde;o Coelho</span>
+									<span class="user-profile-role">Founder</span>
 								</div>
 								<a href="#" class="profile-detail-icon" >
 									<i class="pi pi-sign-out"></i>
