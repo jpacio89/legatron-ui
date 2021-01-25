@@ -15,15 +15,15 @@ export default {
         return {
             model : [
 								{ label: 'Overview', icon: 'pi pi-fw pi-home', to:'/' },
-								{ label: 'Brains', icon: 'pi pi-fw pi-cloud', to:'/' },
+								{ label: 'Brains', icon: 'pi pi-fw pi-cloud', to:'/brains' },
 								{
 									label: 'Chess Brain', icon: 'pi pi-fw pi-cloud',
 									items: [
-										{ label: 'Details', icon: 'pi pi-fw pi-id-card', to: '/formlayout' },
+										{ label: 'Information', icon: 'pi pi-fw pi-id-card', to: '/formlayout' },
 										{ label: 'Transformers', icon: 'pi pi-fw pi-id-card', to: '/formlayout' },
 									]
 								},
-								{
+								/*{
 									label: 'UI Kit', icon: 'pi pi-fw pi-star',
 									items: [
 										{label: 'Form Layout', icon: 'pi pi-fw pi-id-card', to: '/formlayout'},
@@ -101,7 +101,7 @@ export default {
 											]
 										}
 									]
-								},
+								},*/
 								{	label: 'Documentation', icon: 'pi pi-fw pi-info-circle', to: '/documentation' },
 						]
         }

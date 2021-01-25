@@ -2,6 +2,15 @@ import {createRouter, createWebHashHistory} from 'vue-router';
 
 const routes = [
 	{
+		path: '/brains',
+		name: 'brains',
+		meta: {
+			breadcrumb: [{ parent:'Available Brains', label:'' }]
+		},
+		exact: true,
+		component: () => import('./pages/Brains.vue')
+	},
+	{
 		path: '/',
 		name: 'dashboard',
 		meta: {
