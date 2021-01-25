@@ -17,7 +17,7 @@
 						<span>Google</span>
 					</div>
 					<div class="user-detail">
-						<div>This purpose of this brain is to learn to play chess and master winning gameplay tactics and strategies.</div>
+						<div>The purpose of this brain is to learn to play chess and master winning gameplay tactics and strategies.</div>
 						<ul>
 							<li>
 								Status <div class="value">Active <i class="pi pi-arrow-circle-right"></i>
