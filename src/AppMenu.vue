@@ -19,8 +19,8 @@ export default {
 								{
 									label: 'Chess Brain', icon: 'pi pi-fw pi-cloud',
 									items: [
-										{ label: 'Information', icon: 'pi pi-fw pi-id-card', to: '/formlayout' },
-										{ label: 'Transformers', icon: 'pi pi-fw pi-id-card', to: '/formlayout' },
+										{ label: 'Information', icon: 'pi pi-fw pi-id-card', to: '/transformers' },
+										{ label: 'Transformers', icon: 'pi pi-fw pi-id-card', to: '/transformers' },
 									]
 								},
 								/*{

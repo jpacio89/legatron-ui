@@ -7,8 +7,9 @@
 				</div>
 				<div class="user-card-content">
 					<img src="assets/layout/images/avatar/avatar-igor.jpg" alt="">
-					<Menu ref="menu" :model="items" :popup="true" appendTo="body" />
-					<Button type="button" icon="pi pi-cog" @click="menuToggle"/>
+					<router-link to="grid">
+						<Button type="button" icon="pi pi-arrow-right" @click="menuToggle"/>
+					</router-link>
 
 					<div class="user-card-name">
 						<span>KasparoV Chess Bot</span>
@@ -20,22 +21,16 @@
 						<div>The purpose of this brain is to learn to play chess and master winning gameplay tactics and strategies.</div>
 						<ul>
 							<li>
-								Status <div class="value">Active <i class="pi pi-arrow-circle-right"></i>
-								</div>
+								Status <div class="value">Active</div>
 							</li>
 							<li>
-								Monthly Budget <div class="value">1,000$ <i class="pi pi-arrow-circle-right"></i>
-								</div>
+								Monthly Budget <div class="value">1,000$</div>
 							</li>
 							<li>
-								Open Positions <div class="value">10 <i class="pi pi-arrow-circle-right"></i>
-								</div>
+								Transformer Count <div class="value">20</div>
 							</li>
 							<li>
-								Transformer Count <div class="value">20 <i class="pi pi-arrow-circle-right"></i></div>
-							</li>
-							<li>
-								Transformer Active/Inactive Ratio <div class="value">0.4 <i class="pi pi-arrow-circle-right"></i></div>
+								Transformer Active/Inactive Ratio <div class="value">0.4</div>
 							</li>
 						</ul>
 					</div>

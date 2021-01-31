@@ -5,10 +5,19 @@ const routes = [
 		path: '/brains',
 		name: 'brains',
 		meta: {
-			breadcrumb: [{ parent:'Available Brains', label:'' }]
+			breadcrumb: [{ parent:'Brains', label:'' }]
 		},
 		exact: true,
 		component: () => import('./pages/Brains.vue')
+	},
+	{
+		path: '/transformers',
+		name: 'transformers',
+		meta: {
+			breadcrumb: [{ parent:'Transformers', label:'' }]
+		},
+		exact: true,
+		component: () => import('./pages/Transformers.vue')
 	},
 	{
 		path: '/',
