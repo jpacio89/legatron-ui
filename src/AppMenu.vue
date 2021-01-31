@@ -14,7 +14,7 @@ export default {
     data() {
         return {
             model : [
-								{ label: 'Overview', icon: 'pi pi-fw pi-home', to:'/' },
+								//{ label: 'Overview', icon: 'pi pi-fw pi-home', to:'/' },
 								{ label: 'Brains', icon: 'pi pi-fw pi-cloud', to:'/brains' },
 								{
 									label: 'Chess Brain', icon: 'pi pi-fw pi-cloud',

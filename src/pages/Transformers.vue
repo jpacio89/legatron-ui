@@ -2,44 +2,20 @@
 	<div class="p-grid">
 		<div class="p-col-12">
 			<div class="card">
-				<h4>Default</h4>
-				<p>Pagination, sorting, filtering and checkbox selection.</p>
+				<h4>My Transformers</h4>
+				<p>Check the transformers you have submitted to improve the efficiency of this brain.</p>
 				<DataTable :value="customer1" :paginator="true" class="p-datatable-customers" :rows="10" dataKey="id" :rowHover="true" v-model:selection="selectedCustomers1"
-							:filters="filters1" :loading="loading1">
-					<template #header>
-						<div class="table-header p-d-flex p-flex-column p-flex-md-row p-jc-md-between">
-							List of Customers
-							<span class="p-input-icon-left">
-                                <i class="pi pi-search" />
-                                <InputText v-model="filters1['global']" placeholder="Global Search" />
-                            </span>
-						</div>
-					</template>
+						:filters="filters1" :loading="loading1">
 					<template #empty>
-						No customers found.
+						No transformers found.
 					</template>
 					<template #loading>
-						Loading customers data. Please wait.
+						Loading transformers data. Please wait.
 					</template>
-					<Column selectionMode="multiple" headerStyle="width: 3em"></Column>
 					<Column field="name" header="Name" :sortable="true">
 						<template #body="slotProps">
 							<span class="p-column-title">Name</span>
 							{{slotProps.data.name}}
-						</template>
-					</Column>
-					<Column header="Country" :sortable="true" sortField="country.name" filterField="country.name">
-						<template #body="slotProps">
-							<span class="p-column-title">Country</span>
-							<img src="assets/demo/flags/flag_placeholder.png" :alt="slotProps.data.country.name" :class="'flag flag-' + slotProps.data.country.code" width="30" />
-							<span style="margin-left: .5em; vertical-align: middle" class="image-text">{{slotProps.data.country.name}}</span>
-						</template>
-					</Column>
-					<Column header="Representative" :sortable="true" sortField="representative.name" filterField="representative.name">
-						<template #body="slotProps">
-							<span class="p-column-title">Representative</span>
-							<img :alt="slotProps.data.representative.name" :src="'assets/demo/images/avatar/' + slotProps.data.representative.image" width="32" style="vertical-align: middle" />
-							<span style="margin-left: .5em; vertical-align: middle" class="image-text">{{slotProps.data.representative.name}}</span>
 						</template>
 					</Column>
 					<Column field="date" header="Date" :sortable="true">
@@ -54,9 +30,9 @@
 							<span :class="'customer-badge status-' + slotProps.data.status">{{slotProps.data.status}}</span>
 						</template>
 					</Column>
-					<Column field="activity" header="Activity" :sortable="true">
+					<Column field="activity" header="Score" :sortable="true">
 						<template #body="slotProps">
-							<span class="p-column-title">Activity</span>
+							<span class="p-column-title">Score</span>
 							<ProgressBar :value="slotProps.data.activity" :showValue="false" />
 						</template>
 					</Column>
