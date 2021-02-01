@@ -6,6 +6,14 @@
 				<p>Check the transformers you have submitted to improve the efficiency of this brain.</p>
 				<DataTable :value="customer1" :paginator="true" class="p-datatable-customers" :rows="10" dataKey="id" :rowHover="true" v-model:selection="selectedCustomers1"
 						:filters="filters1" :loading="loading1">
+					<template #header>
+						<div class="table-header p-d-flex p-flex-column p-flex-md-row p-jc-md-between">
+							Create new trasnformer
+							<span class="p-input-icon-left">
+								<Button label="Create" class="p-mr-2 p-mb-2"></Button>
+              </span>
+						</div>
+					</template>
 					<template #empty>
 						No transformers found.
 					</template>
@@ -38,7 +46,7 @@
 					</Column>
 					<Column headerStyle="width: 8rem; text-align: center" bodyStyle="text-align: center; overflow: visible">
 						<template #body>
-							<Button type="button" icon="pi pi-cog" class="p-button-secondary"></Button>
+							<Button type="button" icon="pi pi-search" class="p-button-secondary"></Button>
 						</template>
 					</Column>
 				</DataTable>
@@ -78,11 +86,6 @@
 						<template #body="slotProps">
 							<span class="p-column-title">Score</span>
 							<ProgressBar :value="slotProps.data.activity" :showValue="false" />
-						</template>
-					</Column>
-					<Column headerStyle="width: 8rem; text-align: center" bodyStyle="text-align: center; overflow: visible">
-						<template #body>
-							<Button type="button" icon="pi pi-cog" class="p-button-secondary"></Button>
 						</template>
 					</Column>
 				</DataTable>
