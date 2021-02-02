@@ -20,6 +20,15 @@ const routes = [
 		component: () => import('./pages/Transformers.vue')
 	},
 	{
+		path: '/transformers/new',
+		name: 'new-transformer',
+		meta: {
+			breadcrumb: [{ parent:'New Transformer', label:'' }]
+		},
+		exact: true,
+		component: () => import('./pages/NewTransformer.vue')
+	},
+	{
 		path: '/',
 		name: 'dashboard',
 		meta: {

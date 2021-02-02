@@ -8,9 +8,11 @@
 						:filters="filters1" :loading="loading1">
 					<template #header>
 						<div class="table-header p-d-flex p-flex-column p-flex-md-row p-jc-md-between">
-							Create new trasnformer
+							Create new transformer
 							<span class="p-input-icon-left">
-								<Button label="Create" class="p-mr-2 p-mb-2"></Button>
+								<router-link to="/transformers/new">
+									<Button label="New Transformer" class="p-mr-2 p-mb-2"></Button>
+								</router-link>
               </span>
 						</div>
 					</template>
