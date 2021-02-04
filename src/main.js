@@ -77,6 +77,9 @@ import '@fullcalendar/daygrid/main.min.css';
 import '@fullcalendar/timegrid/main.min.css';
 import 'prismjs/themes/prism-coy.css';
 
+import { PrismEditor } from 'vue-prism-editor';
+import 'vue-prism-editor/dist/prismeditor.min.css'; // import the styles
+
 router.beforeEach(function(to, from, next) {
     window.scrollTo(0, 0);
     next();
@@ -96,6 +99,7 @@ app.directive('tooltip', Tooltip);
 app.directive('ripple', Ripple);
 app.directive('code', CodeHighlight);
 
+app.component('PrismEditor', PrismEditor);
 app.component('Accordion', Accordion);
 app.component('AccordionTab', AccordionTab);
 app.component('AutoComplete', AutoComplete);
