@@ -9,26 +9,34 @@
 </template>
 
 <script>
-  // import highlighting library (you can use any library you want just return html string)
-  import { highlight, languages } from 'prismjs/components/prism-core';
-  import 'prismjs/components/prism-clike';
-  import 'prismjs/components/prism-javascript';
-  import 'prismjs/themes/prism-tomorrow.css'; // import syntax highlighting styles
+// import highlighting library (you can use any library you want just return html string)
+import { highlight, languages } from 'prismjs/components/prism-core';
+import 'prismjs/components/prism-clike';
+import 'prismjs/components/prism-java';
+import 'prismjs/themes/prism-tomorrow.css'; // import syntax highlighting styles
 
-	export default {
-		components: {
-    //  PrismEditor,
-    },
-    data: () => ({
-			code: 'console.log("Hello World")',
-			lineNumbers: true
-		}),
-    methods: {
-      highlighter(code) {
-        return highlight(code, languages.js); //returns html
-      },
-    }
+const bootCode = `
+public class HelloWorld {
+	public static void main(String[] args) {
+		System.out.println("Hello World!");
 	}
+}
+`;
+
+export default {
+	components: {
+  //  PrismEditor,
+  },
+  data: () => ({
+		code: bootCode.trim(),
+		lineNumbers: true
+	}),
+  methods: {
+    highlighter(code) {
+      return highlight(code, languages.java); //returns html
+    },
+  }
+}
 </script>
 
 <style scoped lang="scss">
