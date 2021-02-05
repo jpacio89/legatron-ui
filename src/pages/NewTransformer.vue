@@ -1,10 +1,16 @@
 <template>
 	<div class="p-grid">
-		<prism-editor
-      class="my-editor height-300"
-      v-model="code"
-      :highlight="highlighter"
-      :line-numbers="lineNumbers"></prism-editor>
+		<div class="p-col-12">
+			<div class="card">
+			<h4>New Transformer</h4>
+			<p>Write the code for your transformer in the following editor:</p>
+			<prism-editor
+				class="my-editor height-300"
+				v-model="code"
+				:highlight="highlighter"
+				:line-numbers="lineNumbers"></prism-editor>
+			</div>
+		</div>
 	</div>
 </template>
 
