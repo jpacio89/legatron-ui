@@ -29,7 +29,7 @@
 				<router-view />
 			</div>
 
-			<AppConfig :theme="theme" :layout="layout" @theme-change="onThemeChange" @layout-change="onLayoutChange" :layoutMode="layoutMode" :wrapperMode="wrapperMode" @layout-mode-change="onLayoutModeChange" @wrapper-mode-change="onWrapperModeChange"></AppConfig>
+			<TransformerBuildDetails :theme="theme" :layout="layout" @theme-change="onThemeChange" @layout-change="onLayoutChange" :layoutMode="layoutMode" :wrapperMode="wrapperMode" @layout-mode-change="onLayoutModeChange" @wrapper-mode-change="onWrapperModeChange"></TransformerBuildDetails>
 
 			<AppFooter />
 
@@ -40,7 +40,7 @@
 
 <script>
 import AppTopBar from './AppTopbar.vue';
-import AppConfig from './AppConfig.vue';
+import TransformerBuildDetails from './TransformerBuildDetails.vue';
 import AppMenu from './AppMenu.vue';
 import AppActionBar from './AppActionBar';
 import AppFooter from './AppFooter.vue';
@@ -184,7 +184,7 @@ export default {
     },
     components: {
         'AppTopBar': AppTopBar,
-        'AppConfig': AppConfig,
+        'TransformerBuildDetails': TransformerBuildDetails,
         'AppMenu': AppMenu,
 		'AppFooter': AppFooter,
 		'AppActionBar': AppActionBar
