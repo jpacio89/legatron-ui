@@ -1341,14 +1341,14 @@ body {
     .dashboard .team .all-members-link:hover {
       background-color: #a1a5aa;
       transition-duration: 0.2s; }
-.dashboard .timeline {
+.timeline {
   padding-bottom: 6px; }
-  .dashboard .timeline ul {
+  .timeline ul {
     padding: 0;
     margin: 0;
     list-style-type: none;
     position: relative; }
-    .dashboard .timeline ul::before {
+    .timeline ul::before {
       content: ' ';
       display: inline-block;
       position: absolute;
@@ -1358,50 +1358,50 @@ body {
       height: 100%;
       z-index: 400;
       background: linear-gradient(to bottom, #0d1013, #2c3640); }
-    .dashboard .timeline ul li .p-col-fixed {
+    .timeline ul li .p-col-fixed {
       z-index: 500;
       width: 48px; }
-      .dashboard .timeline ul li .p-col-fixed .timeline-icon {
+      .timeline ul li .p-col-fixed .timeline-icon {
         z-index: 700;
         text-align: center;
         background-color: #ffffff;
         border: solid 1px #dfe6ee;
         border-radius: 50%; }
-        .dashboard .timeline ul li .p-col-fixed .timeline-icon i {
+        .timeline ul li .p-col-fixed .timeline-icon i {
           font-size: 14px; }
-    .dashboard .timeline ul li:nth-child(1) .timeline-icon {
+    .timeline ul li:nth-child(1) .timeline-icon {
       padding: 9px 8px; }
-      .dashboard .timeline ul li:nth-child(1) .timeline-icon i {
+      .timeline ul li:nth-child(1) .timeline-icon i {
         color: #e73c3c; }
-    .dashboard .timeline ul li:nth-child(2) .timeline-icon {
+    .timeline ul li:nth-child(2) .timeline-icon {
       padding: 7px; }
-      .dashboard .timeline ul li:nth-child(2) .timeline-icon i {
+      .timeline ul li:nth-child(2) .timeline-icon i {
         color: #fd4a85; }
-    .dashboard .timeline ul li:nth-child(3) .timeline-icon {
+    .timeline ul li:nth-child(3) .timeline-icon {
       padding: 9px 8px; }
-      .dashboard .timeline ul li:nth-child(3) .timeline-icon i {
+      .timeline ul li:nth-child(3) .timeline-icon i {
         color: #e73c3c; }
-    .dashboard .timeline ul li:nth-child(4) .timeline-icon {
+    .timeline ul li:nth-child(4) .timeline-icon {
       padding: 8px; }
-      .dashboard .timeline ul li:nth-child(4) .timeline-icon i {
+      .timeline ul li:nth-child(4) .timeline-icon i {
         color: #f4a22e; }
-    .dashboard .timeline ul li:nth-child(5) .timeline-icon {
+    .timeline ul li:nth-child(5) .timeline-icon {
       padding: 8px; }
-      .dashboard .timeline ul li:nth-child(5) .timeline-icon i {
+      .timeline ul li:nth-child(5) .timeline-icon i {
         color: #2fc5b3; }
-    .dashboard .timeline ul li .time-line-event .timeline-event-title {
+    .timeline ul li .time-line-event .timeline-event-title {
       padding: 3px 7px;
       background-color: #eaf0f6;
       color: #525e6c;
       border-radius: 5px; }
-    .dashboard .timeline ul li .time-line-event .timeline-event-message {
+    .timeline ul li .time-line-event .timeline-event-message {
       position: relative;
       padding: 8px;
       margin-bottom: 5px;
       background-color: #ffffff;
       border: 1px solid #ebebef;
       border-radius: solid 1px 3px; }
-    .dashboard .timeline ul li .timeline-event-time {
+    .timeline ul li .timeline-event-time {
       float: right;
       color: #657587;
       font-size: 12px; }
@@ -2067,10 +2067,10 @@ body {
   top: 0px;
   display: block;
   right: 0;
-  width: 550px;
+  width: 850px;
   z-index: 1000;
   height: 100vh;
-  transform: translate3d(550px, 0px, 0px);
+  transform: translate3d(850px, 0px, 0px);
   transition: transform 0.2s; }
   .layout-config.layout-config-active {
     transform: translate3d(0px, 0px, 0px); }

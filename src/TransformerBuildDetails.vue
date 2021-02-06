@@ -8,32 +8,61 @@
                 <i class="pi pi-times"></i>
             </a>
             <TabView>
-                <TabPanel header="Console">
-                    <h5>Build log</h5>
-                </TabPanel>
+                <TabPanel header="Metrics"></TabPanel>
                 <TabPanel header="Data">
-                    <h5 style="margin-top: 0">Input Style</h5>
-                    <div class="p-formgroup-inline">
-                        <div class="p-field-radiobutton">
-                            <RadioButton id="input_outlined" name="inputstyle" value="outlined" :modelValue="value" @update:modelValue="onChange" />
-                            <label for="input_outlined">Outlined</label>
-                        </div>
-                        <div class="p-field-radiobutton">
-                            <RadioButton id="input_filled" name="inputstyle" value="filled" :modelValue="value" @update:modelValue="onChange" />
-                            <label for="input_filled">Filled</label>
-                        </div>
-                    </div>
-
-                    <h5>Ripple Effect</h5>
-                    <InputSwitch :modelValue="rippleActive" @update:modelValue="onRippleChange"  />
-
-                    <h5>Theme Colors</h5>
-                    <div class="p-grid">
-                        <div class="p-col p-col-fixed colors" v-for="t of componentThemes" :key="t.name">
-                            <a @click="changeComponentTheme($event, t.file)" :class="['layout-config-option', {'selected': (theme === t.file)}]" :style="{backgroundColor:t.color}">
-                                <i class="pi pi-check" v-if="theme === t.file"></i>
-                            </a>
-                        </div>
+                  <DataTable :paginator="true" class="p-datatable-customers" :rows="10" dataKey="id" :rowHover="true">
+                    <template #empty>
+                      No data available.
+                    </template>
+                    <template #loading>
+                      Loading transformed data. Please wait.
+                    </template>
+                    <Column field="name" header="Name">
+                      <template>
+                        <span class="p-column-title">Name</span>
+                      </template>
+                    </Column>
+                    <Column field="date" header="Date">
+                      <template>
+                        <span class="p-column-title">Date</span>
+                        <span></span>
+                      </template>
+                    </Column>
+                    <Column field="status" header="Status">
+                      <template>
+                        <span class="p-column-title">Status</span>
+                        <span></span>
+                      </template>
+                    </Column>
+                    <Column field="activity" header="Score">
+                      <template>
+                        <span class="p-column-title">Score</span>
+                      </template>
+                    </Column>
+                  </DataTable>
+                </TabPanel>
+                <TabPanel header="Log">
+                    <div class="timeline">
+                      <ul>
+                        <li v-for="n in 20" v-bind:key="n">
+                          <div class="p-grid">
+                            <div class="p-col-fixed">
+                              <div class="timeline-icon">
+                                <i class="pi pi-inbox"></i>
+                              </div>
+                            </div>
+                            <div class="p-col">
+                              <div class="time-line-event">
+                                <!--<span class="timeline-event-title">Info</span>-->
+                                <div class="timeline-event-message">Transformer loaded into the remote brain.</div>
+                                <!--<div class="timeline-event-time">
+                                  2 mins ago
+                                </div>-->
+                              </div>
+                            </div>
+                          </div>
+                        </li>
+                      </ul>
                     </div>
                 </TabPanel>
             </TabView>
@@ -241,3 +270,7 @@ export default {
     }
 }
 </script>
+
+<style scoped lang="scss">
+
+</style>
